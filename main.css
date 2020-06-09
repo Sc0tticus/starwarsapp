@@ -1,0 +1,56 @@
+h1{
+    text-align: center;
+    font-family: starjedi;
+    font-size: 80px;
+    color:  #feda4a;
+}
+h3 {
+    text-align: center;
+    font-family: starjedi;
+    font-size: 30px;
+    color:  #feda4a;
+    position: relative;
+    top: -80px;
+}
+body{
+    background-image: url('https://starwarsblog.starwars.com/wp-content/uploads/2020/04/star-wars-backgrounds-25.jpg');
+}
+.container {
+ position: relative;
+}
+.buttons {
+    margin: 0;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+   
+    
+
+    
+}
+.buttons a{
+    text-decoration: none;
+    font-family: starjedi;
+    font-size: 30px;
+    
+
+}
+
+.tallbutton {
+    height: 100px;
+    width: 220px;
+    border-radius: 20px;
+    position: relative;
+    top: 100px;
+}
+
+.shortbutton {
+    height: 100px;
+    width: 220px;
+    border-radius: 20px;
+    position: relative;
+    top: 100px;
+}
+}
