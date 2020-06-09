@@ -57,6 +57,7 @@ button {
     z-index: 1000;
    align-content: center;
     right: 200px;
+    font-size: 20px;
     height: 80px;
 }
 
