@@ -9,9 +9,8 @@ submitButton.addEventListener('click',() => {
 
 function getHeight() {
     parseInt(heightInput.innerHTML)
-    console.log()
     let userHeight = (heightInput.value / 0.394)
-    // height now in CM
+    //  userheight now in centimeters
     fetchCharacters(userHeight)
 }
 
@@ -23,36 +22,25 @@ function fetchCharacters(userHeight){
 }
 
 
-
 function selectCharacters(characters, userHeight){
     characters.forEach(character => {
-        const userHeightInt = parseInt(userHeight)
-        if (userHeightInt < character.height) {
-            console.log( userHeight)
+        if (character.height > userHeight) {
+            console.log(userHeight)
             const characterCard = document.createElement('div')
             characterCard.className ='card'
-            const characterName = document.createElement('h2')
+            const characterName = document.createElement('h3')
             characterName.className ='char-name'
             const characterHeight = document.createElement('h4')
             characterHeight.className = 'char-height'
-           
+
             characterName.innerText = `${character.name}`
-            characterHeight.innerText =` is ${Math.round((character.height - userHeightInt) * 0.394)} inches taller than you!`
+            characterHeight.innerText =` is ${Math.round((character.height - userHeight) * 0.394)} inches taller than you!`
 
 
             characterCard.append(characterName, characterHeight)
             document.body.append(characterCard)
+
+           
         }
     })
 }
-
-
-
-
-// fetch("http://localhost/characters/")
-//     .then(response => response.json())
-//     .then(character => controller(character))
-
-// function controller(character ) {
-
-// }
